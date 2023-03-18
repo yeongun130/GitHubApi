@@ -26,7 +26,7 @@
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="ex. rkswlrbduf"
+        android:hint="ex. leehyeonbin"
         android:cursorVisible="false"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
