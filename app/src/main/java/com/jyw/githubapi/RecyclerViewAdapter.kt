@@ -1,10 +1,13 @@
-package com.jyw.githubapi
+package blackstone.com.githubrepo_rxkotlin
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.jyw.githubapi.R
+
+
 
 class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.mViewHolder>() {
 
@@ -13,19 +16,18 @@ class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerViewAdapter.mViewHolder
     inner class mViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var id: TextView = itemView.findViewById(R.id.mID)
         var name: TextView = itemView.findViewById(R.id.mName)
-        var bio: TextView = itemView.findViewById(R.id.mbio)
-        var followers: TextView = itemView.findViewById(R.id.mfollowers)
-        var following: TextView = itemView.findViewById(R.id.mfollowing)
+        var url: TextView = itemView.findViewById(R.id.mUrl)
+        var date: TextView = itemView.findViewById(R.id.mDate)
     }
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): mViewHolder = mViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.recyclerview_row, p0, false))
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): mViewHolder = mViewHolder(LayoutInflater.from(p0.context).inflate(
+        R.layout.main_item_view, p0, false))
 
     override fun onBindViewHolder(p0: mViewHolder, p1: Int) {
-        p0.id.text = githubRepos[p1].toString()
-        p0.name.text = githubRepos[p1].toString()
-        p0.bio.text = githubRepos[p1].toString()
-        p0.followers.text = githubRepos[p1].toString()
-        p0.following.text = githubRepos[p1].toString()
+        p0.id.text = githubRepos[p1].id
+        p0.name.text = githubRepos[p1].name
+        p0.url.text = githubRepos[p1].url
+        p0.date.text = githubRepos[p1].date
     }
 
     override fun getItemCount(): Int = githubRepos.size

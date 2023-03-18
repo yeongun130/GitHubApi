@@ -21,12 +21,12 @@
 
     <EditText
         android:id="@+id/input"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:hint="ex. leehyeonbin"
+        android:hint="ex) leehyeonbin"
         android:cursorVisible="false"
         android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,14 +34,14 @@
 
     <Button
         android:id="@+id/next"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
         android:textSize="19dp"
-        android:textStyle="bold"
         android:text="@string/input_next"
-        android:textColor="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:textColor="#ffffff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

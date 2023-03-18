@@ -3,6 +3,7 @@ package com.jyw.githubapi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import blackstone.com.githubrepo_rxkotlin.RecyclerViewAdapter
 import com.jyw.githubapi.databinding.ActivityMainBinding
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
